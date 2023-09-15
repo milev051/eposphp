@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini CRM</title>
+    <link rel="icon" href="img/Logo.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    
+    <section>
+        <h1>Unos Kompanija</h1>
+        <table>
+            <tr>
+                <th>Maticni Broj</th>
+                <th>Ime Kompanije</th>
+                <th>Datum Unosa</th>
+            </tr>
+            <tr>
+                <th><input type="text" id="maticni_broj"></th>
+                <th><input type="text" id="ime_kompanije"></th>
+                <th><input type="date" id="datum_unosa"></th>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <button onclick="dodajKompaniju()">Dodaj</button>
+        <button onclick="ukloniKompaniju()">Ukloni</button>
+        <button onclick="preuzmiJson()">Preuzmi JSON</button>
+    </section>
+
+    <section id="sve_kompanije">
+        <h2>Sve Kompanije</h2>
+        <table id="tabela_kompanija">
+            <thead>
+                <tr>
+                    <th>Maticni Broj</th>
+                    <th>Ime Kompanije</th>
+                    <th>Datum Unosa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ovde će se dodavati redovi sa podacima o kompanijama -->
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
+
+<script src="js/script.js"></script>
